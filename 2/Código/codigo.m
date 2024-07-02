@@ -1,4 +1,4 @@
-%Ya tenemos el script y ahora llamamos a la función con los distintpos
+%Ya tenemos el script y ahora llamamos a la funciÃ³n con los distintpos
 %valores de W y de c que nos dan.
 imDicom = dicomread('breast');
 [imOutput1] = bright_contrast_adjust(imDicom, 580, 2700);
