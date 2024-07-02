@@ -3,7 +3,7 @@ A = rand(3);
 B = rand(3);
 C = conv2(A,B);
 C1 = conv2(A,B,'same') ;% cogemos la parte central de la matriz de convolucion
-tic; C1 = conv2(A,B,'same'); t1=toc % el comando tic toc nois da el tiempo que le cuesta realoizar al programa una operación
+tic; C1 = conv2(A,B,'same'); t1=toc % el comando tic toc nois da el tiempo que le cuesta realoizar al programa una operaciÃ³n
 % Comprobamos la npropiedad conmutativa
 D = conv2(B,A);
 C==D % se compara y nos da true (excepto algunos valores pero es or los decimales)
@@ -12,14 +12,14 @@ tic
 pm=4;
 pn=4;
 A(pm,pn)=0;% meto una fila y columna de ceros
-B(pm,pn)=0; % idem A CEROPADDING al calcular la transformada rapida de fourier la dimensión debe ser potencia de 2
+B(pm,pn)=0; % idem A CEROPADDING al calcular la transformada rapida de fourier la dimensiÃ³n debe ser potencia de 2
 C2=ifft2(fft2(A).*fft2(B)); % convolucionar porque multiplicar en frecuencia es convolucionar en continuo
 C2=C2(2:end,2:end);
-t2=toc; % Deshacemos el ceropadding que hempos añadido, por la estructura de la TF estas entradas de los ceros se añaden al raves (1ra columna y 1ra fila)
+t2=toc; % Deshacemos el ceropadding que hempos aÃ±adido, por la estructura de la TF estas entradas de los ceros se aÃ±aden al raves (1ra columna y 1ra fila)
 
 % Comparando t1= 4.267000000000000e-04 y t2= 0.0103 vemos que convolucionar
-% direct5amente es mucho más rapido que hacer TF y después la ITF (¿pero 
-% porque es más lento? porque fft + ceropadding tien un valor cte pero slidding aumenta exponenciamente el tiempo de computación, solo es más rápida cuando covolucionamos matrices de dimensio0nes pequeñas)
+% direct5amente es mucho mÃ¡s rapido que hacer TF y despuÃ©s la ITF (Â¿pero 
+% porque es mÃ¡s lento? porque fft + ceropadding tien un valor cte pero slidding aumenta exponenciamente el tiempo de computaciÃ³n, solo es mÃ¡s rÃ¡pida cuando covolucionamos matrices de dimensio0nes pequeÃ±as)
 %%
 A1 = rand(256);
 for i=1:128
@@ -61,13 +61,13 @@ subplot(2,2,2),imagesc(imah);
 subplot(2,2,3),imagesc(fima1); 
 subplot(2,2,4),imagesc(fima2);
 %comprueba las diferencias --> vemos que visulamente la difrencia entre
-%fima1 (kernels separqables) y fima2 (kernel entero) es mínima y no se
+%fima1 (kernels separqables) y fima2 (kernel entero) es mÃ­nima y no se
 %aprecia
 figure 
 imagesc(fima2-fima1) % Es la diferencia entre obtener la imagen mediante kernbels sepoarados o juntos, es decir es el error que tenemos de uno a otro)
 dif=mean2(abs(fima1-fima2)) % para cuantificar este error obtenemos el valor y vmeos que tiene un factor de 10 a la -13 por lo que no es significativo
 
-% Comparando tiempos vemos que con los separados es mucho más rapido que
+% Comparando tiempos vemos que con los separados es mucho mÃ¡s rapido que
 % con el kernel conjunto con un factor de 20
 
 %%
@@ -75,7 +75,7 @@ ima=imread('ojo.jpg');
 ima=rgb2gray(ima);
 colormap(gray);
 imagesc(ima);
-% ejemplo de aplicación de un filtro gaussiano
+% ejemplo de aplicaciÃ³n de un filtro gaussiano
 h=fspecial('gaussian')
 fima=imfilter(ima,h,'symmetric');
 figure
