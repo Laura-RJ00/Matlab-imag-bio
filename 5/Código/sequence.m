@@ -1,4 +1,4 @@
-%% Ejercicio 1
+%% 
 close all
 clear all
 imin=imread('fondo_ojo.jpg','jpg');
@@ -7,7 +7,7 @@ figure ('Name', 'Imagen segmentada')
 imOut=label2rgb(imout);
 imshow(imOut)
 
-%% Ejercicio 2
+%% 
 close all
 clear all
 imin=imread('fondo_ojo.jpg','jpg');
@@ -16,7 +16,7 @@ imin=imread('fondo_ojo.jpg','jpg');
 figure ('Name', 'Imagen segmentada')
 imOut=label2rgb(imout);
 imshow(imOut)
-%% Ejercicio 4
+%% 
 close all
 clear all
 imInput=imread('prostate.png','png');
@@ -27,4 +27,4 @@ figure
 suptitle('Resultados Ejercicio 4')
 subplot(1,3,1), imshow(imInput), title('original')
 subplot(1,3,2), imshow(nuclei_mask), title('nuclei mask')
-subplot(1,3,3),figureBlend(imInput,nuclei_mask,0.5,'red'),title ('Imagen con m·scara superpuesta')
+subplot(1,3,3),figureBlend(imInput,nuclei_mask,0.5,'red'),title ('Imagen con m√°scara superpuesta')
