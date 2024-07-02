@@ -108,7 +108,7 @@ subplot(2,2,4), imshow(imout), title('Imagen segmentada')
 
 end
 
-%% Ejercicio 1
+%% 
 close all
 clear all
 imin=imread('fondo_ojo.jpg','jpg');
@@ -117,4 +117,4 @@ figure ('Name', 'Imagen segmentada')
 imOut=label2rgb(imout);
 imshow(imOut)
 
-%% Ejercicio 2
+
